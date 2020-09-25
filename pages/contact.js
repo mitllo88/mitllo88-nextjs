@@ -13,7 +13,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-		<form className="contact">
+		<form className="contact" method="POST" data-netlify="true">
 		<div className="container">
 			<div className="row">
 					<h1>Contact us</h1>
@@ -24,30 +24,30 @@ export default function Home() {
 			<div className="row input-container">
 					<div className="col-xs-12">
 						<div className="styled-input wide">
-							<input type="text" required />
+							<input type="text" id="name" name="name" required />
 							<label>Name</label> 
 						</div>
 					</div>
 					<div className="col-md-6 col-sm-12">
 						<div className="styled-input email">
-							<input type="text" required />
+							<input type="text" id="email" name="email" required />
 							<label>Email</label> 
 						</div>
 					</div>
 					<div className="col-md-6 col-sm-12">
 						<div className="styled-input" >
-							<input type="text" required />
+							<input type="text" id="phone" name="phone" required />
 							<label>Phone Number</label> 
 						</div>
 					</div>
 					<div className="col-xs-12">
 						<div className="styled-input wide">
-							<textarea required></textarea>
+							<textarea id="message" name="message" required></textarea>
 							<label>Message</label>
 						</div>
 					</div>
 					<div className="col-xs-12">
-						<div className="btn-lrg submit-btn">Send Message</div>
+						<button className="btn-lrg submit-btn" type="submit">Send Message</button>
 					</div>
 			</div>
 		</div>
